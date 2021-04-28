@@ -23,6 +23,6 @@ public class EntryService {
         for (String str : array) {
             sb.append(str);
         }
-        return DigestUtils.sha1Hex(sb.toString();
+        return DigestUtils.sha1Hex(sb.toString());
     }
 }
