@@ -3,7 +3,7 @@ package wechat;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
 
-import com.limengning.wechat.accesstoken.AccessTokenService;
+import io.github.limengning.wechat.accesstoken.AccessTokenService;
 
 import org.junit.jupiter.api.Test;
 

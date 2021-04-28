@@ -1,7 +1,7 @@
 package io.github.limengning.wechat.message;
 
-import com.limengning.wechat.Constants;
-import com.limengning.wechat.accesstoken.AccessTokenService;
+import io.github.limengning.wechat.Constants;
+import io.github.limengning.wechat.accesstoken.AccessTokenService;
 
 import io.github.limengning.http.JsonClient;
 

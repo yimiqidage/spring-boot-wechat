@@ -5,10 +5,10 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 import java.util.HashMap;
 import java.util.Map;
 
-import com.limengning.wechat.accesstoken.AccessTokenService;
-import com.limengning.wechat.message.TemplateMessage;
-import com.limengning.wechat.message.TemplateMessageData;
-import com.limengning.wechat.message.TemplateMessageService;
+import io.github.limengning.wechat.accesstoken.AccessTokenService;
+import io.github.limengning.wechat.message.TemplateMessage;
+import io.github.limengning.wechat.message.TemplateMessageData;
+import io.github.limengning.wechat.message.TemplateMessageService;
 
 import org.junit.jupiter.api.Test;
 
