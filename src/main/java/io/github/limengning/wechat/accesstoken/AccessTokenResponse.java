@@ -1,4 +1,4 @@
-package com.limengning.wechat.accesstoken;
+package io.github.limengning.wechat.accesstoken;
 
 public class AccessTokenResponse {
     private String accessToken;

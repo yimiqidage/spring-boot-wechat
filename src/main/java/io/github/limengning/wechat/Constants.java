@@ -1,4 +1,4 @@
-package com.limengning.wechat;
+package io.github.limengning.wechat;
 
 public class Constants {
     public static final String BASE_API = "https://api.weixin.qq.com/cgi-bin/";

@@ -1,4 +1,4 @@
-package com.limengning.wechat;
+package io.github.limengning.wechat;
 
 import java.util.Arrays;
 import org.apache.commons.codec.digest.DigestUtils;

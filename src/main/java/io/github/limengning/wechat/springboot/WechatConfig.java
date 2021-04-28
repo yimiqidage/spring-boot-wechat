@@ -1,4 +1,4 @@
-package com.limengning.wechat;
+package io.github.limengning.wechat.springboot;
 
 public class WechatConfig {
     private String entryUrl;

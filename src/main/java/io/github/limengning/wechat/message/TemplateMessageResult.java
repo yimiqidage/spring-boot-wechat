@@ -1,4 +1,4 @@
-package com.limengning.wechat.message;
+package io.github.limengning.wechat.message;
 
 public class TemplateMessageResult {
     private int errcode;

@@ -1,4 +1,4 @@
-package com.limengning.wechat.accesstoken;
+package io.github.limengning.wechat.accesstoken;
 
 import java.util.HashMap;
 import java.util.Map;

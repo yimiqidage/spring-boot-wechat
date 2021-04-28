@@ -1,4 +1,4 @@
-package com.limengning.wechat.message;
+package io.github.limengning.wechat.message;
 
 import com.limengning.wechat.Constants;
 import com.limengning.wechat.accesstoken.AccessTokenService;
