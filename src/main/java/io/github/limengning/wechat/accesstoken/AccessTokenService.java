@@ -6,11 +6,16 @@ import java.util.Timer;
 import java.util.TimerTask;
 
 import org.apache.commons.lang3.StringUtils;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import io.github.limengning.http.JsonClient;
-import com.limengning.wechat.Constants;
+import io.github.limengning.wechat.Constants;
+import io.github.limengning.wechat.WechatConfig;
+
 
 public class AccessTokenService {
+    private static final Logger LOGGER = LoggerFactory.getLogger(AccessTokenService.class);
     private static final int AHEAD_TIME = 300;
     private static final Map<String, String> ACCESS_TOKEN = new HashMap<>(0);
     private static Timer timer = null;
@@ -18,10 +23,10 @@ public class AccessTokenService {
     private final String appid;
     private final String secret;
 
-    public AccessTokenService(String appid, String secret) {
+    public AccessTokenService(WechatConfig wechatConfig) {
         this.grantType = "client_credential";
-        this.appid = appid;
-        this.secret = secret;
+        this.appid = wechatConfig.getAppid();
+        this.secret = wechatConfig.getSecret();
         ACCESS_TOKEN.put(appid, null);
     }
 
@@ -32,6 +37,7 @@ public class AccessTokenService {
     public synchronized String getAccessToken() {
         String accessToken = ACCESS_TOKEN.get(appid);
         if (StringUtils.isEmpty(accessToken)) {
+            LOGGER.debug("Access token is empty, load from wechat service");
             loadAccessTokenFromWechat();
             accessToken = ACCESS_TOKEN.get(appid);
         }
