@@ -15,7 +15,8 @@ import io.github.limengning.wechat.WechatConfig;
 @AutoConfigureBefore(WechatConfigAutoConfigure.class)
 public class WechatConfigAutoConfigure {
     private static final Logger LOGGER = LoggerFactory.getLogger(WechatConfigAutoConfigure.class);
-    @Bean(initMethod = "init")
+
+    @Bean()
     @ConditionalOnMissingBean
     public WechatConfig wechatConfig() {
         LOGGER.info("Init WechatConfig");
