@@ -9,14 +9,17 @@ import io.github.limengning.wechat.accesstoken.AccessTokenService;
 import io.github.limengning.wechat.message.TemplateMessage;
 import io.github.limengning.wechat.message.TemplateMessageData;
 import io.github.limengning.wechat.message.TemplateMessageService;
+import io.github.limengning.wechat.springboot.WechatConfigWrapper;
 
 import org.junit.jupiter.api.Test;
 
 public class TemplateMessageServiceTest {
     @Test
     public void sendTempalteMessage() {
-        AccessTokenService accessTokenService = new AccessTokenService("wxe971e03384a3600a",
-                "18d95b6ca46239b46fea8a98978a58a2");
+        WechatConfigWrapper wechatConfig = new WechatConfigWrapper();
+        wechatConfig.setAppid("wxe971e03384a3600a");
+        wechatConfig.setSecret("18d95b6ca46239b46fea8a98978a58a2");
+        AccessTokenService accessTokenService = new AccessTokenService(wechatConfig);
         TemplateMessageService templateMessageService = new TemplateMessageService(accessTokenService);
         TemplateMessage message = new TemplateMessage();
         message.setTouser("ooSjn6aQzjeoCG2jVnr5iLNntH_I");
