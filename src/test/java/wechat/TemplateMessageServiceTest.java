@@ -1,5 +1,6 @@
 package wechat;
 
+import static org.junit.jupiter.api.Assertions.assertNotEquals;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
 import java.util.HashMap;
@@ -28,7 +29,7 @@ public class TemplateMessageServiceTest {
         data.put("name", new TemplateMessageData("limengning"));
         message.setData(data);
         message.setUrl("https://www.baidu.com");
-        boolean result = templateMessageService.sendTempalteMessage(message);
-        assertTrue(result);
+        long msgId = templateMessageService.sendTempalteMessage(message);
+        assertNotEquals(0, msgId);
     }
 }

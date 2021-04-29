@@ -13,7 +13,7 @@ public class TemplateMessageService {
         this.accessTokenService = accessTokenService;
     }
 
-    public void sendTempalteMessage(TemplateMessage message) {
+    public long sendTempalteMessage(TemplateMessage message) {
         String accessToken = accessTokenService.getAccessToken();
         try (JsonClient client = new JsonClient(Constants.BASE_API)) {
             TemplateMessageResult resp = client.post("message/template/send?access_token=" + accessToken,
@@ -21,6 +21,7 @@ public class TemplateMessageService {
             if (resp.getErrcode() != 0) {
                 throw new WechatException(resp, "Send tempalte message");
             }
+            return resp.getMsgid();
         }
     }
 }
