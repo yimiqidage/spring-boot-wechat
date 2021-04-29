@@ -6,9 +6,9 @@ import java.util.HashMap;
 import java.util.Map;
 
 import io.github.limengning.wechat.accesstoken.AccessTokenService;
-import io.github.limengning.wechat.message.TemplateMessage;
-import io.github.limengning.wechat.message.TemplateMessageData;
 import io.github.limengning.wechat.message.TemplateMessageService;
+import io.github.limengning.wechat.message.request.TemplateMessage;
+import io.github.limengning.wechat.message.request.TemplateMessageData;
 import io.github.limengning.wechat.springboot.WechatConfigWrapper;
 
 import org.junit.jupiter.api.Test;
