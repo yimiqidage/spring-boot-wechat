@@ -48,7 +48,7 @@ public class OAuthService {
             queryParameters.put("openid", accessToken.getOpenid());
             queryParameters.put("lang", "zh_CN");
 
-            WechatUserInfo resp = client.get(" https://api.weixin.qq.com/sns/userinfo", WechatUserInfo.class,
+            WechatUserInfo resp = client.get("https://api.weixin.qq.com/sns/userinfo", WechatUserInfo.class,
                     queryParameters);
             if (resp.getErrcode() != 0) {
                 throw new WechatException(resp, "Get user info");
